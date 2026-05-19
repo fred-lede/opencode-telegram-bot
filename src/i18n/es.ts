@@ -94,10 +94,15 @@ export const es: I18nDictionary = {
   "bot.photo_no_caption":
     "💡 Consejo: agrega un pie de foto para describir que quieres hacer con esta foto.",
   "bot.file_downloading": "⏳ Descargando archivo...",
+  "bot.files_downloading": "⏳ Descargando archivos...",
   "bot.file_too_large": "⚠️ El archivo es demasiado grande (max {maxSizeMb}MB)",
   "bot.file_download_error": "🔴 No se pudo descargar el archivo",
   "bot.file_type_unsupported":
     "⚠️ Este tipo de archivo no es compatible. Envía una imagen, PDF o archivo de texto/código.",
+  "bot.media_group_not_processed":
+    "⚠️ Uno o más archivos de este álbum no se pueden procesar. No se envió nada a OpenCode.",
+  "bot.media_group_download_error":
+    "🔴 No se pudo descargar uno de los archivos. No se envió nada a OpenCode.",
   "bot.model_no_pdf": "⚠️ El modelo actual no admite entrada PDF. Enviaré solo texto.",
   "bot.text_file_too_large": "⚠️ El archivo de texto es demasiado grande (max {maxSizeKb}KB)",
 

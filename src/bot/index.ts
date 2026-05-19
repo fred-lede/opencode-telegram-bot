@@ -78,6 +78,7 @@ import { createTelegramBotOptions } from "./telegram-client-options.js";
 import { clearPromptResponseMode, processUserPrompt } from "./handlers/prompt.js";
 import { handleVoiceMessage } from "./handlers/voice.js";
 import { handleDocumentMessage } from "./handlers/document.js";
+import { createMediaGroupAttachmentMiddleware } from "./handlers/media-group.js";
 import { downloadTelegramFile, toDataUri } from "./utils/file-download.js";
 import { reconcileBusyState } from "./utils/busy-reconciliation.js";
 import { finalizeAssistantResponse } from "./utils/finalize-assistant-response.js";
@@ -1370,6 +1371,8 @@ export function createBot(): Bot<Context> {
     chatIdInstance = ctx.chat.id;
     await handleVoiceMessage(ctx, voicePromptDeps);
   });
+
+  bot.on("message", createMediaGroupAttachmentMiddleware({ bot, ensureEventSubscription }));
 
   // Photo message handler
   bot.on("message:photo", async (ctx) => {

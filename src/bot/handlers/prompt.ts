@@ -232,7 +232,8 @@ export async function processUserPrompt(
     if (parts.length === 0 || (parts.length > 0 && parts.every((p) => p.type === "file"))) {
       if (fileParts.length > 0) {
         // Files without text - add a minimal system prompt
-        parts.unshift({ type: "text", text: "See attached file" });
+        const attachmentText = fileParts.length === 1 ? "See attached file" : "See attached files";
+        parts.unshift({ type: "text", text: attachmentText });
       }
     }
 

@@ -289,4 +289,34 @@ describe("bot/handlers/prompt", () => {
     expect(handled).toBe(true);
     expect(mocked.suppressionRegisterMock).not.toHaveBeenCalled();
   });
+
+  it("uses plural placeholder text for multiple file-only prompts", async () => {
+    const handled = await processUserPrompt(createContext(), "", createDeps(), [
+      {
+        type: "file",
+        mime: "image/png",
+        url: "data:image/png;base64,Zmlyc3Q=",
+      } as never,
+      {
+        type: "file",
+        mime: "image/png",
+        url: "data:image/png;base64,c2Vjb25k",
+      } as never,
+    ]);
+
+    expect(handled).toBe(true);
+
+    const backgroundTask = getScheduledBackgroundTask();
+    await backgroundTask.task();
+
+    expect(mocked.sessionPromptAsyncMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        parts: [
+          { type: "text", text: "See attached files" },
+          expect.objectContaining({ type: "file", mime: "image/png" }),
+          expect.objectContaining({ type: "file", mime: "image/png" }),
+        ],
+      }),
+    );
+  });
 });

@@ -87,10 +87,15 @@ export const ru: I18nDictionary = {
   "bot.photo_download_error": "🔴 Не удалось скачать фото",
   "bot.photo_no_caption": "💡 Совет: Добавьте подпись, чтобы описать, что делать с этим фото.",
   "bot.file_downloading": "⏳ Скачиваю файл...",
+  "bot.files_downloading": "⏳ Скачиваю файлы...",
   "bot.file_too_large": "⚠️ Файл слишком большой (макс. {maxSizeMb}МБ)",
   "bot.file_download_error": "🔴 Не удалось скачать файл",
   "bot.file_type_unsupported":
     "⚠️ Этот тип файла не поддерживается. Отправьте изображение, PDF или текстовый/кодовый файл.",
+  "bot.media_group_not_processed":
+    "⚠️ Один или несколько файлов в альбоме нельзя обработать. В OpenCode ничего не отправлено.",
+  "bot.media_group_download_error":
+    "🔴 Не удалось скачать один из файлов. В OpenCode ничего не отправлено.",
   "bot.model_no_pdf": "⚠️ Текущая модель не поддерживает PDF. Отправляю только текст.",
   "bot.text_file_too_large": "⚠️ Текстовый файл слишком большой (макс. {maxSizeKb}КБ)",
 

@@ -87,10 +87,15 @@ export const en = {
   "bot.photo_download_error": "🔴 Failed to download photo",
   "bot.photo_no_caption": "💡 Tip: Add a caption to describe what you want to do with this photo.",
   "bot.file_downloading": "⏳ Downloading file...",
+  "bot.files_downloading": "⏳ Downloading files...",
   "bot.file_too_large": "⚠️ File is too large (max {maxSizeMb}MB)",
   "bot.file_download_error": "🔴 Failed to download file",
   "bot.file_type_unsupported":
     "⚠️ This file type is not supported. Send an image, PDF, or text/code file.",
+  "bot.media_group_not_processed":
+    "⚠️ One or more files in this album cannot be processed. Nothing was sent to OpenCode.",
+  "bot.media_group_download_error":
+    "🔴 Failed to download one of the files. Nothing was sent to OpenCode.",
   "bot.model_no_pdf": "⚠️ Current model doesn't support PDF input. Sending text only.",
   "bot.text_file_too_large": "⚠️ Text file is too large (max {maxSizeKb}KB)",
 

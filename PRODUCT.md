@@ -155,7 +155,7 @@ Model picker behavior:
 - [x] UI localization support via i18n files
 - [x] Service message visibility controls (thinking/tool updates)
 - [x] Sending code blocks as text files when needed
-- [x] Image attachments support (send photos/screenshots from Telegram to OpenCode)
+- [x] Image attachments support (send photos/screenshots from Telegram to OpenCode, including multiple files in one Telegram album)
 - [x] PDF attachments support (send documents from Telegram to OpenCode)
 - [x] Text file attachments support (send code/config/log files from Telegram to OpenCode)
 - [x] Voice/audio transcription via Whisper-compatible APIs (OpenAI/Groq/Together and compatible providers)
